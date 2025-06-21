@@ -9,7 +9,7 @@ namespace Autorizacion.DA.Repositorios
         private readonly IConfiguration _configuration;
         private SqlConnection _connection;
 
-        public RepositorioDapper(IConfiguration configuration, SqlConnection connection)
+        public RepositorioDapper(IConfiguration configuration)
         {
             _configuration = configuration;
             _connection = new SqlConnection(_configuration.GetConnectionString("BDSeguridad"));
