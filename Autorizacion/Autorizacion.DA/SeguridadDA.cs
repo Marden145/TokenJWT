@@ -11,7 +11,7 @@ namespace Autorizacion.DA
         IRepositorioDapper _repositorioDapper;
         private SqlConnection _SqlConnection;
 
-        public SeguridadDA(IRepositorioDapper repositorioDapper, SqlConnection sqlConnection)
+        public SeguridadDA(IRepositorioDapper repositorioDapper)
         {
             _repositorioDapper = repositorioDapper;
             _SqlConnection = repositorioDapper.ObtenerRepositorioDapper();
