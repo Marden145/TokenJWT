@@ -2,6 +2,7 @@
 using Autorizacion.Abstracciones.Modelos;
 using System.Data.SqlClient;
 using Dapper;
+using Helpers;
 
 namespace Autorizacion.DA
 {
@@ -28,7 +29,7 @@ namespace Autorizacion.DA
             string sql = @"[ObtenerUsuario]";
             var consulta = await _SqlConnection.QueryAsync<Abstracciones.Entidades.Usuario>(sql, new { CorreoElectronico = usuario.CorreoElectronico
                 , NombreUsuario = usuario.NombreUsuario });
-            return Convertidor.Convertir<Abstracciones.Entidades.Usuario, Abstracciones.Modelos.Perfiles>(consulta.FirstOrDefault());
+            return Convertidor.Convertir<Abstracciones.Entidades.Usuario, Abstracciones.Modelos.Usuario>(consulta.FirstOrDefault());
         }
     }
 }

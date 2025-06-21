@@ -13,6 +13,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Autorizacion.Abstracciones\Autorizacion.Abstracciones.csproj" />
+    <ProjectReference Include="..\Helpers\Helpers.csproj" />
   </ItemGroup>
 
 </Project>
