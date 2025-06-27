@@ -1,5 +1,6 @@
 ﻿using Autorizacion.Abstracciones.BW;
 using Autorizacion.Abstracciones.Modelos;
+using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 using System.Security.Claims;
@@ -80,4 +81,12 @@ namespace Autorizacion.Middleware
             });
         }
     }
+    public static class ClaimsPerfilesExtensions
+    {
+        public static IApplicationBuilder UseClaimsPerfiles(this IApplicationBuilder builder)
+        {
+            return builder.UseMiddleware<ClaimsPerfiles>();
+        }
+    }
+
 }
