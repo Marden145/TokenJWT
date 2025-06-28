@@ -1,6 +1,6 @@
 ﻿using Autorizacion.Abstracciones.DA;
 using Microsoft.Extensions.Configuration;
-using System.Data.SqlClient;
+using Microsoft.Data.SqlClient;
 
 namespace Autorizacion.DA.Repositorios
 {
